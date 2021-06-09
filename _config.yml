@@ -3,19 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 演示站点
+title: Dualer's World
 subtitle: ''
-description: '这是一个演示站点'
+description: 'GR=RG'
 keywords:
-author: 
-language: zh-CN
+author: ''
+language: en
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://yoursite.com
-#permalink: :year/:month/:day/:title/
-permalink: post/:abbrlink/
+url: http://example.com
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -30,7 +29,6 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
- - admin/*
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -99,75 +97,14 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+#theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
-  
-# 永久链接
-# abbrlink config
-abbrlink:
-  alg: crc32      #support crc16(default) and crc32
-  rep: hex        #support dec(default) and hex
-  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
-  # Generate categories from directory-tree
-  # depth: the max_depth of directory-tree you want to generate, should > 0
-  auto_category:
-     enable: true  #true(default)
-     depth:        #3(default)
-     over_write: false 
-  auto_title: false #enable auto title, it can auto fill the title by path
-  auto_date: false #enable auto date, it can auto fill the date by time today
-  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
-  
-# # 本地搜索
-# search:
-#   path: search.xml
-#   field: post
-#   format: html
-#   limit: 10000
-
-# 站点地图
-sitemap:
-  path: sitemap.xml
-# hexo-filter-nofollow
-# https://github.com/hexojs/hexo-filter-nofollow
-nofollow:
-  enable: true
-  field: site
-  exclude:
-# hexo-all-minifier
-all_minifier: true
-html_minifier:
-  enable: true
-  ignore_error: false
-  silent: true
-  exclude:
-css_minifier:
-  enable: true
-  silent: true
-  exclude: 
-    - '*.min.css'
-js_minifier:
-  enable: true
-  mangle: true
-  silent: true
-  output:
-  compress:
-  exclude: 
-    - '*.min.js'
-js_concator:
-  enable: false
-  bundle_path: '/js/bundle.js'
-  front: false
-  silent: false
-image_minifier:
-  enable: true
-  interlaced: false
-  multipass: false
-  optimizationLevel: 2
-  pngquant: false
-  progressive: false
-  silent: true
+  type: git
+  repository:
+    # github: https://github.com/dualer/dualer.github.io.git
+    github: https://gitlab.com/dualer/dualer.gitlab.io.git
+  branch: master
